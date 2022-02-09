@@ -1,23 +1,20 @@
 
 pipeline {
     agent any
-
-    stages {
-        stage('Build') {
+   
+    
+    tools {
+      maven 'Maven_3.5.4'
+          }
+     stages {
+        stage('Compile') {
             steps {
-               sh   'mvn build'
+               sh   'mvn clean compile'
   
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+       
+         
+      
     }
-}
+
