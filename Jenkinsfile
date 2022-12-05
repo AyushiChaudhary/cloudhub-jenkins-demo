@@ -16,3 +16,5 @@ pipeline {
             steps {
                echo "This is Deploy stage" 
             }
+        }
+    }
